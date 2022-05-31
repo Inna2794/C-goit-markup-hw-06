@@ -823,6 +823,10 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-field {
+  margin-bottom: 10px;
+}
+
+.modal-field-text {
   margin-bottom: 28px;
 }
 .check-text {
@@ -838,7 +842,7 @@ address {
   content: "";
   width: 16px;
   height: 15px;
-  border: 2px solid #212121;
+  border: 1px solid #212121;
   border-radius: 2px;
   margin-right: 8px;
 }
@@ -849,6 +853,10 @@ address {
   background-image: url(../images/check1.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.input-check:focus + .check-text::before {
+  border-color: 0.2px solid #ffffff;
 }
 
 .input-btn {
@@ -863,6 +871,7 @@ address {
   padding-bottom: 10px;
   padding-right: 55px;
   padding-left: 55px;
+  border: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -880,9 +889,8 @@ address {
 }
 
 .input-text {
-  color: #2196f3;
+  color: var(--accent-color);
 }
-
 .is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -961,4 +969,9 @@ address {
 }
 .online-soc-icon {
   margin-left: 10px;
+}
+
+.modal-text:hover,
+.modal-text:focus {
+  border-color: #1f8be3;
 }
